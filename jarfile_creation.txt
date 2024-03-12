@@ -1,0 +1,36 @@
+sudo yum update -y
+wget https://dlcdn.apache.org/maven/maven-3/3.9.6/binaries/apache-maven-3.9.6-bin.tar.gz
+tar -zxvf apache-maven-3.9.6-bin.tar.gz
+ls
+mv apache-maven-3.9.6 maven
+ls
+ls -a
+vi .bashrc
+source .bashrc
+mvn --version
+yum install java-11* -y
+mvn --version
+mvn archetype:generate
+--------provide all details--------
+choose a number: 2112
+Choose a number: 7: 8
+Define value for property 'groupId': mavenproject
+Define value for property 'artifactId': jarfile
+Define value for property 'version' 1.0-SNAPSHOT: :
+Define value for property 'package' mavenproject: :
+Y :: y
+--------
+ls -a
+cd jarfile
+---------inside packagename directory-----------
+mvn clean
+mvn validate
+mvn compile
+mvn test
+mvn package ---> pom.xml src target will be present
+mvn verify
+mvn install
+cd
+----------inside root user----------------
+cd .m2/repository/mavenpro/jarfile/1.0-SNAPSHOT
+ls
